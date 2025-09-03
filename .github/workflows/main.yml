@@ -1,1 +1,17 @@
+name: Main CI workflow
 
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  runs-build:
+    name: Call Reuseable workflow
+    uses: Benjakunee17/call-template/.github/workflows/node.yml@main
+    with:
+      node-version: '20'
