@@ -1,5 +1,4 @@
 name: Main CI workflow
-
 on:
   push:
     branches:
@@ -10,8 +9,8 @@ on:
       - main
 
 jobs:
-  runs-build:
+  run-build:
     name: Call Reuseable workflow
-    uses: Benjakunee17/node-template/blob/main/.github/workflows/node.yml
+    uses: Benjakunee17/node-template/.github/workflows/node.yml@main
     with:
       node-version: '20'
